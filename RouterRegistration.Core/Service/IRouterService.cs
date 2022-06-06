@@ -12,7 +12,7 @@ namespace RouterRegistration.Core.Service
         /// GetAllEndUsers will return all end Users
         /// </summary>
         /// <returns></returns>
-        IEnumerable<Router> GetAllRouters();
+        IEnumerable<Router> GetAllRouters(string from, string to);
 
     }
 }

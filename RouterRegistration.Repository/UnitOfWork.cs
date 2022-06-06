@@ -20,9 +20,9 @@ namespace RouterRegistration.Repository
 
         public IRouterRepository RouterRepository { get; private set; }
 
-        public UnitOfWork(IConfigurationRoot config)
+        public UnitOfWork(IConfiguration config)
         {
-            string connString = config["ConnectionStrings:DBConnectionString"];
+            string connString = config.GetConnectionString("DefaultConnection");
             _connection = new SqlConnection(connString);
 
             RouterRepository = new RouterRepository(_connection);

@@ -30,7 +30,7 @@ namespace RouterRegistration.Services
             }
         }
 
-        public IEnumerable<Router> GetAllRouters()
+        public IEnumerable<Router> GetAllRouters(string from, string to)
         {
             return _unitOfWork.RouterRepository.GetAllRouters();
         }

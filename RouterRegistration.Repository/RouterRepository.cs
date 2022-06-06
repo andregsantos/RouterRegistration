@@ -27,10 +27,9 @@ namespace RouterRegistration.Repository
 
                 return routersList;
             }
-            catch (Exception ex)
+            catch
             {
-
-                throw ex;
+                throw ;
             }
         }
     }
