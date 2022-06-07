@@ -2,6 +2,8 @@
 using Microsoft.Extensions.Logging;
 using RouterRegistration.Core.Service;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace RouterRegistration.Api.Controllers
 {
@@ -49,8 +51,8 @@ namespace RouterRegistration.Api.Controllers
             try
             {
                 var routers = _routerService.SearchRoute(from, to);
-    
-                return Ok(routers);
+
+               return Ok(routers);
 
             }
             catch (Exception ex)
@@ -62,5 +64,7 @@ namespace RouterRegistration.Api.Controllers
             }
 
         }
+
+
     }
 }

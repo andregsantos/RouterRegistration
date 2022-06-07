@@ -14,7 +14,7 @@ namespace RouterRegistration.Core.Service
         /// <returns></returns>
         IEnumerable<Route> GetAllRoutes();
 
-        IEnumerable<Route> SearchRoute(string from, string to);
+        RouteSearch SearchRoute(string from, string to);
 
     }
 }

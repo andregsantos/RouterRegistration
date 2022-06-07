@@ -67,8 +67,8 @@ namespace RouterRegistration.Repository
 
         public void Dispose()
         {
-            _transaction.Dispose();
-            _connection.Dispose();
+           // _transaction.Dispose();
+           // _connection.Dispose();
         }
     }
 }
