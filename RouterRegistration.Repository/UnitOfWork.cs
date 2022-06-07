@@ -18,15 +18,16 @@ namespace RouterRegistration.Repository
         private readonly IDbConnection _connection;
         private IDbTransaction _transaction;
 
-        public IRouterRepository RouterRepository { get; private set; }
+        public IRouteRepository RouterRepository { get; private set; }
 
         public UnitOfWork(IConfiguration config)
         {
-            string connString = config.GetConnectionString("DefaultConnection");
-            _connection = new SqlConnection(connString);
+            _connection = new SqlConnection(config.GetConnectionString("DefaultConnection"));
 
-            RouterRepository = new RouterRepository(_connection);
+            RouterRepository = new RouteRepository(this);
         }
+
+        public IDbConnection GetConnection => _connection;
 
         public void BeginTransaction()
         {

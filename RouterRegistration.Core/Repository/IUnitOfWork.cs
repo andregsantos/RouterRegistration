@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 
 namespace RouterRegistration.Core.Repository
 {
@@ -7,7 +8,8 @@ namespace RouterRegistration.Core.Repository
     /// </summary>
     public interface IUnitOfWork : IDisposable
     {
-        IRouterRepository RouterRepository { get; }
+        IDbConnection GetConnection { get;}
+        IRouteRepository RouterRepository { get; }
 
         void BeginTransaction();
         void CommitTransaction();

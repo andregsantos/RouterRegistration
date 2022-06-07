@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace RouterRegistration.Services
 {
-    public class RouterService : IRouterService
+    public class RouteService : IRouteService
     {
         /// <summary>
         /// Private IUnitOfWork Data Member
@@ -17,7 +17,7 @@ namespace RouterRegistration.Services
         /// NewsService Constructor
         /// </summary>
         /// <param name="unitOfWork">IUnitOfWork</param>
-        public RouterService(IUnitOfWork unitOfWork)
+        public RouteService(IUnitOfWork unitOfWork)
         {
             try
             {
@@ -30,9 +30,17 @@ namespace RouterRegistration.Services
             }
         }
 
-        public IEnumerable<Router> GetAllRouters(string from, string to)
+        public IEnumerable<Route> SearchRoute(string from, string to)
+        {
+            var routes = _unitOfWork.RouterRepository.GetAllRouters();
+
+            return routes;
+        }
+
+        public IEnumerable<Route> GetAllRoutes()
         {
             return _unitOfWork.RouterRepository.GetAllRouters();
         }
+
     }
 }

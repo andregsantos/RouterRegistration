@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 namespace RouterRegistration.Core.Repository
 {
-    public interface IRouterRepository
+    public interface IRouteRepository
     {
-        IEnumerable<Router> GetAllRouters();
+        IEnumerable<Route> GetAllRouters();
     }
 }
