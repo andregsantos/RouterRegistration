@@ -52,7 +52,7 @@ namespace RouterRegistration.Api.Controllers
             {
                 var routers = _routerService.SearchRoute(from, to);
 
-               return Ok(routers);
+                return Ok(routers);
 
             }
             catch (Exception ex)
@@ -65,6 +65,61 @@ namespace RouterRegistration.Api.Controllers
 
         }
 
+        [HttpPut("/route")]
+        public IActionResult NewRoute([FromBody] Core.Model.Route route)
+        {
+            try
+            {
+                _routerService.NewRoute(route);
 
+                return Ok();
+
+            }
+            catch (Exception ex)
+            {
+
+                _logger.LogError((int)System.Diagnostics.Tracing.EventLevel.Error, ex, ex.Message);
+
+                return NotFound(ex.Message);
+            }
+        }
+
+        [HttpPost("/route")]
+        public IActionResult UpdateRoute([FromBody] Core.Model.Route route)
+        {
+            try
+            {
+                _routerService.UpdateRoute(route);
+
+                return Ok();
+
+            }
+            catch (Exception ex)
+            {
+
+                _logger.LogError((int)System.Diagnostics.Tracing.EventLevel.Error, ex, ex.Message);
+
+                return NotFound(ex.Message);
+            }
+        }
+
+        [HttpDelete("/route/{routeId}")]
+        public IActionResult DeleteRoute([FromQuery] int routeId)
+        {
+            try
+            {
+                _routerService.DeleteRoute(routeId);
+
+                return Ok();
+
+            }
+            catch (Exception ex)
+            {
+
+                _logger.LogError((int)System.Diagnostics.Tracing.EventLevel.Error, ex, ex.Message);
+
+                return NotFound(ex.Message);
+            }
+        }
     }
 }

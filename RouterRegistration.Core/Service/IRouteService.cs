@@ -8,13 +8,9 @@ namespace RouterRegistration.Core.Service
     /// </summary>
     public interface IRouteService
     {
-        /// <summary>
-        /// GetAllEndUsers will return all end Users
-        /// </summary>
-        /// <returns></returns>
         IEnumerable<Route> GetAllRoutes();
-
         RouteSearch SearchRoute(string from, string to);
-
-    }
+        void NewRoute(Route route);
+        void DeleteRoute(int routeId);
+        void UpdateRoute(Route route);    }
 }

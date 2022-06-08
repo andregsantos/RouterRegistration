@@ -91,7 +91,7 @@ namespace RouterRegistration.Core.Grafo
                 return QueryWeight(node).From != null;
             }
 
-            public  IEnumerable<Node> ComputedPathToOrigin(Node node)
+            public IEnumerable<Node> ComputedPathToOrigin(Node node)
             {
                 var n = node;
                 while (n != null)

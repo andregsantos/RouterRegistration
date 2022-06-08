@@ -28,52 +28,66 @@ namespace RouterRegistration.Services
 
         public RouteSearch SearchRoute(string from, string to)
         {
-            var lista = new HashSet<string>();
+            var hashSetOfRoute = new HashSet<string>();
 
             var routes = _unitOfWork.RouterRepository.GetAllRouters()
                 .ToList();
 
-            for (int i = 0; i < routes.Count; i++)
+            routes.ForEach((r) =>
             {
-                var r = routes[i];
-                lista.Add(r.To);
-                lista.Add(r.From);
-            }
+                hashSetOfRoute.Add(r.To);
+                hashSetOfRoute.Add(r.From);
+            });
 
             var nodes = new Dictionary<string, Node>();
-            foreach (var item in lista)
+
+            hashSetOfRoute.ToList().ForEach((r) => nodes.Add(r, new Node(r)));
+
+            routes.ForEach((r) => nodes[r.To].ConnectTo(nodes[r.From], r.Price));
+
+            try
             {
-                nodes.Add(item, new Node(item));
-            }
+                var shortestPathTest = _shortestPathFinder.FindShortestPath(nodes[from], nodes[to]);
 
-            for (int i = 0; i < routes.Count; i++)
+                var routesList = new List<string>();
+                shortestPathTest.ToList().ForEach(r => routesList.Add(r.Label));
+
+                int price = 0;
+
+                //calcula valores
+                for (int i = 0; i < routesList.Count() - 1; i++)
+                {
+                    price += routes.FirstOrDefault(x => (x.From == routesList[i] && x.To == routesList[i + 1]) ||
+                       (x.To == routesList[i] && x.From == routesList[i + 1])).Price;
+                }
+
+                return new RouteSearch() { Routes = routesList, Price = price };
+
+            }
+            catch
             {
-                var r = routes[i];
-                nodes[r.To].ConnectTo(nodes[r.From], r.Price);
+                throw new System.ApplicationException("Invalid route.");
             }
-
-            var shortestPathTest = _shortestPathFinder.FindShortestPath(nodes[from], nodes[to]);
-            List<string> retorno = new List<string>();
-            foreach (var item in shortestPathTest)
-            {
-
-                retorno.Add(item.Label);
-            }
-
-            int price = 0;
-            //calcula valores
-            for (int i = 0; i < retorno.Count() - 1; i++)
-            {
-                 price += routes.FirstOrDefault(x => (x.From == retorno[i] && x.To == retorno[i + 1]) ||
-                    (x.To == retorno[i] && x.From == retorno[i + 1])).Price;
-            }
-
-            return new RouteSearch() { Routes = retorno, Price = price };
         }
 
         public IEnumerable<Route> GetAllRoutes()
         {
             return _unitOfWork.RouterRepository.GetAllRouters();
+        }
+
+        public void NewRoute(Route route)
+        {
+            _unitOfWork.RouterRepository.GetAllRouters();
+        }
+
+        public void DeleteRoute(int routeId)
+        {
+            _unitOfWork.RouterRepository.GetAllRouters();
+        }
+
+        public void UpdateRoute(Route route)
+        {
+            _unitOfWork.RouterRepository.GetAllRouters();
         }
     }
 }
