@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RouterRegistration.Core\RouterRegistration.Core.csproj" />
+    <ProjectReference Include="..\RouterRegistration.Core\RouterRegistration.Domain.csproj" />
   </ItemGroup>
 
 </Project>

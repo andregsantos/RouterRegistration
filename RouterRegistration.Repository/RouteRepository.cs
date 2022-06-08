@@ -21,7 +21,7 @@ namespace RouterRegistration.Repository
             {
                 List<Route> routersList = new List<Route>();
 
-                routersList = _unitOfWork.GetConnection.Query<Route>("Select * from Router", commandType: CommandType.Text)
+                routersList = _unitOfWork.GetConnection.Query<Route>("Select * from [Route]", commandType: CommandType.Text)
                     .ToList();
 
                 return routersList;
@@ -30,6 +30,24 @@ namespace RouterRegistration.Repository
             {
                 throw;
             }
+        }
+
+        public void NewRoute(Route route)
+        {
+            _unitOfWork.GetConnection.Execute("Insert into [Route] ([from],[to],[price]) values(@from,@to,@price)", route);
+        }
+
+        public void DeleteRoute(int id)
+        {
+            _unitOfWork.GetConnection.Execute("Delete from [Route] where Id=@Id", new
+            {
+                @Id = id
+            });
+        }
+
+        public void UpdateRoute(Route route)
+        {
+            _unitOfWork.GetConnection.Execute("Update Route set [from]=@from,[to]=@to,price=@price where Id=@Id", route);
         }
     }
 }

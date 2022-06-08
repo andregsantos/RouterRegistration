@@ -27,7 +27,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.1",
           "Microsoft.AspNetCore.Authentication.OpenIdConnect": "5.0.1",
-          "RouterRegistration.Core": "1.0.0",
+          "RouterRegistration.Domain": "1.0.0",
           "RouterRegistration.Repository": "1.0.0",
           "RouterRegistration.Services": "1.0.0",
           "Swashbuckle.AspNetCore": "5.6.3",
@@ -622,19 +622,19 @@
       },
       "System.Security.Cryptography.Cng/4.5.0": {},
       "System.Security.Principal.Windows/4.7.0": {},
-      "RouterRegistration.Core/1.0.0": {
+      "RouterRegistration.Domain/1.0.0": {
         "runtime": {
-          "RouterRegistration.Core.dll": {}
+          "RouterRegistration.Domain.dll": {}
         },
         "compile": {
-          "RouterRegistration.Core.dll": {}
+          "RouterRegistration.Domain.dll": {}
         }
       },
       "RouterRegistration.Repository/1.0.0": {
         "dependencies": {
           "Dapper": "2.0.123",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
-          "RouterRegistration.Core": "1.0.0",
+          "RouterRegistration.Domain": "1.0.0",
           "System.Data.SqlClient": "4.8.3"
         },
         "runtime": {
@@ -646,7 +646,7 @@
       },
       "RouterRegistration.Services/1.0.0": {
         "dependencies": {
-          "RouterRegistration.Core": "1.0.0"
+          "RouterRegistration.Domain": "1.0.0"
         },
         "runtime": {
           "RouterRegistration.Services.dll": {}
@@ -2546,7 +2546,7 @@
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
     },
-    "RouterRegistration.Core/1.0.0": {
+    "RouterRegistration.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

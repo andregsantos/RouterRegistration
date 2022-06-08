@@ -2,8 +2,6 @@ C:\Users\Andre\source\repos\RouterRegistration\RouterRegistration.Services\bin\D
 C:\Users\Andre\source\repos\RouterRegistration\RouterRegistration.Services\bin\Debug\net5.0\RouterRegistration.Services.dll
 C:\Users\Andre\source\repos\RouterRegistration\RouterRegistration.Services\bin\Debug\net5.0\ref\RouterRegistration.Services.dll
 C:\Users\Andre\source\repos\RouterRegistration\RouterRegistration.Services\bin\Debug\net5.0\RouterRegistration.Services.pdb
-C:\Users\Andre\source\repos\RouterRegistration\RouterRegistration.Services\bin\Debug\net5.0\RouterRegistration.Core.dll
-C:\Users\Andre\source\repos\RouterRegistration\RouterRegistration.Services\bin\Debug\net5.0\RouterRegistration.Core.pdb
 C:\Users\Andre\source\repos\RouterRegistration\RouterRegistration.Services\obj\Debug\net5.0\RouterRegistration.Services.csprojAssemblyReference.cache
 C:\Users\Andre\source\repos\RouterRegistration\RouterRegistration.Services\obj\Debug\net5.0\RouterRegistration.Services.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Andre\source\repos\RouterRegistration\RouterRegistration.Services\obj\Debug\net5.0\RouterRegistration.Services.AssemblyInfoInputs.cache
@@ -13,3 +11,5 @@ C:\Users\Andre\source\repos\RouterRegistration\RouterRegistration.Services\obj\D
 C:\Users\Andre\source\repos\RouterRegistration\RouterRegistration.Services\obj\Debug\net5.0\RouterRegistration.Services.dll
 C:\Users\Andre\source\repos\RouterRegistration\RouterRegistration.Services\obj\Debug\net5.0\ref\RouterRegistration.Services.dll
 C:\Users\Andre\source\repos\RouterRegistration\RouterRegistration.Services\obj\Debug\net5.0\RouterRegistration.Services.pdb
+C:\Users\Andre\source\repos\RouterRegistration\RouterRegistration.Services\bin\Debug\net5.0\RouterRegistration.Domain.dll
+C:\Users\Andre\source\repos\RouterRegistration\RouterRegistration.Services\bin\Debug\net5.0\RouterRegistration.Domain.pdb

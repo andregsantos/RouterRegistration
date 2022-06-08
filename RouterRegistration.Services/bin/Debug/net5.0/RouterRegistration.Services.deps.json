@@ -8,15 +8,15 @@
     ".NETCoreApp,Version=v5.0": {
       "RouterRegistration.Services/1.0.0": {
         "dependencies": {
-          "RouterRegistration.Core": "1.0.0"
+          "RouterRegistration.Domain": "1.0.0"
         },
         "runtime": {
           "RouterRegistration.Services.dll": {}
         }
       },
-      "RouterRegistration.Core/1.0.0": {
+      "RouterRegistration.Domain/1.0.0": {
         "runtime": {
-          "RouterRegistration.Core.dll": {}
+          "RouterRegistration.Domain.dll": {}
         }
       }
     }
@@ -27,7 +27,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "RouterRegistration.Core/1.0.0": {
+    "RouterRegistration.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

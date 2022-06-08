@@ -2,28 +2,28 @@
   "version": 3,
   "targets": {
     "net5.0": {
-      "RouterRegistration.Core/1.0.0": {
+      "RouterRegistration.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "compile": {
-          "bin/placeholder/RouterRegistration.Core.dll": {}
+          "bin/placeholder/RouterRegistration.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/RouterRegistration.Core.dll": {}
+          "bin/placeholder/RouterRegistration.Domain.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "RouterRegistration.Core/1.0.0": {
+    "RouterRegistration.Domain/1.0.0": {
       "type": "project",
-      "path": "../RouterRegistration.Core/RouterRegistration.Core.csproj",
-      "msbuildProject": "../RouterRegistration.Core/RouterRegistration.Core.csproj"
+      "path": "../RouterRegistration.Core/RouterRegistration.Domain.csproj",
+      "msbuildProject": "../RouterRegistration.Core/RouterRegistration.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "RouterRegistration.Core >= 1.0.0"
+      "RouterRegistration.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -57,8 +57,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Andre\\source\\repos\\RouterRegistration\\RouterRegistration.Core\\RouterRegistration.Core.csproj": {
-              "projectPath": "C:\\Users\\Andre\\source\\repos\\RouterRegistration\\RouterRegistration.Core\\RouterRegistration.Core.csproj"
+            "C:\\Users\\Andre\\source\\repos\\RouterRegistration\\RouterRegistration.Core\\RouterRegistration.Domain.csproj": {
+              "projectPath": "C:\\Users\\Andre\\source\\repos\\RouterRegistration\\RouterRegistration.Core\\RouterRegistration.Domain.csproj"
             }
           }
         }

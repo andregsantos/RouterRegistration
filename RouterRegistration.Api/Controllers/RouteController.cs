@@ -45,7 +45,7 @@ namespace RouterRegistration.Api.Controllers
 
         }
 
-        [HttpGet("/router/search/{from}/{to}")]
+        [HttpGet("/search/{from}/{to}")]
         public IActionResult SearchRoute(string from, string to)
         {
             try
@@ -104,7 +104,7 @@ namespace RouterRegistration.Api.Controllers
         }
 
         [HttpDelete("/route/{routeId}")]
-        public IActionResult DeleteRoute([FromQuery] int routeId)
+        public IActionResult DeleteRoute(int routeId)
         {
             try
             {

@@ -53,8 +53,6 @@ namespace RouterRegistration.Services
                 shortestPathTest.ToList().ForEach(r => routesList.Add(r.Label));
 
                 int price = 0;
-
-                //calcula valores
                 for (int i = 0; i < routesList.Count() - 1; i++)
                 {
                     price += routes.FirstOrDefault(x => (x.From == routesList[i] && x.To == routesList[i + 1]) ||
@@ -66,28 +64,13 @@ namespace RouterRegistration.Services
             }
             catch
             {
-                throw new System.ApplicationException("Invalid route.");
+                throw new System.ApplicationException("Route is not valid.");
             }
         }
 
-        public IEnumerable<Route> GetAllRoutes()
-        {
-            return _unitOfWork.RouterRepository.GetAllRouters();
-        }
-
-        public void NewRoute(Route route)
-        {
-            _unitOfWork.RouterRepository.GetAllRouters();
-        }
-
-        public void DeleteRoute(int routeId)
-        {
-            _unitOfWork.RouterRepository.GetAllRouters();
-        }
-
-        public void UpdateRoute(Route route)
-        {
-            _unitOfWork.RouterRepository.GetAllRouters();
-        }
+        public IEnumerable<Route> GetAllRoutes() => _unitOfWork.RouterRepository.GetAllRouters();
+        public void NewRoute(Route route) => _unitOfWork.RouterRepository.NewRoute(route);
+        public void DeleteRoute(int id) => _unitOfWork.RouterRepository.DeleteRoute(id);
+        public void UpdateRoute(Route route) => _unitOfWork.RouterRepository.UpdateRoute(route);
     }
 }

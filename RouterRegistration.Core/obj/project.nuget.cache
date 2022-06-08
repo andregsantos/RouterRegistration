@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XXWmKnXeSPju2NJcrnL3wwnzQUs1AqX5m+lQNTTNpjdpkMQhF2EdZNgqLOAt6dtdzJ10FU4iCOKQ98WI/7JQqQ==",
+  "dgSpecHash": "LUobgp7CzPiF6vyxafa3yMwzW5wxtZpZXtz3Xqn8EcRQ4mkSBRK/eXf9tSNdHlbf4mAqoJ/YnStt6OIQzfuv1Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Andre\\source\\repos\\RouterRegistration\\RouterRegistration.Core\\RouterRegistration.Core.csproj",
+  "projectFilePath": "C:\\Users\\Andre\\source\\repos\\RouterRegistration\\RouterRegistration.Core\\RouterRegistration.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

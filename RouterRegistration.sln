@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RouterRegistration.Core", "RouterRegistration.Core\RouterRegistration.Core.csproj", "{DDAF8FCB-CE42-4706-ADC1-C1D7E60374D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RouterRegistration.Domain", "RouterRegistration.Core\RouterRegistration.Domain.csproj", "{DDAF8FCB-CE42-4706-ADC1-C1D7E60374D6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RouterRegistration.Repository", "RouterRegistration.Repository\RouterRegistration.Repository.csproj", "{919C26F9-0CD2-4935-B0C7-B2FFC5765E98}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RouterRegistration.Services", "RouterRegistration.Services\RouterRegistration.Services.csproj", "{B6A597E6-C5C5-4767-A3D0-D6AC63501FDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouterRegistration.Api", "RouterRegistration.Api\RouterRegistration.Api.csproj", "{08BD081C-E4B3-48CE-8555-8835643F46EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RouterRegistration.Api", "RouterRegistration.Api\RouterRegistration.Api.csproj", "{08BD081C-E4B3-48CE-8555-8835643F46EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

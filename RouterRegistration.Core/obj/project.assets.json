@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Andre\\source\\repos\\RouterRegistration\\RouterRegistration.Core\\RouterRegistration.Core.csproj",
-      "projectName": "RouterRegistration.Core",
-      "projectPath": "C:\\Users\\Andre\\source\\repos\\RouterRegistration\\RouterRegistration.Core\\RouterRegistration.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Andre\\source\\repos\\RouterRegistration\\RouterRegistration.Core\\RouterRegistration.Domain.csproj",
+      "projectName": "RouterRegistration.Domain",
+      "projectPath": "C:\\Users\\Andre\\source\\repos\\RouterRegistration\\RouterRegistration.Core\\RouterRegistration.Domain.csproj",
       "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Andre\\source\\repos\\RouterRegistration\\RouterRegistration.Core\\obj\\",
       "projectStyle": "PackageReference",
